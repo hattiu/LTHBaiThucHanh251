@@ -7,6 +7,8 @@ namespace NewApp.Models
         public string Address {get;set;}
         public string Age {get;set;}
         
+        
+
         //khai bao cac phuong thuc
         public void NhapDuLieu()
         {
@@ -45,8 +47,32 @@ namespace NewApp.Models
             System.Console.WriteLine("Sinh vien {0} - {1} tuoi", ten, diaChi);
             
         }
-        
 
+        public void EnterData()
+        {
+            System.Console.Write("Full name = ");
+            FullName = Console.ReadLine();
+
+            System.Console.Write("Address = ");
+            Address = Console.ReadLine();
+
+            System.Console.Write("Age = ");
+            Age = Console.ReadLine();
+            try{
+                //cau lenhj co the gay ngoai le
+                Age = Console.ReadLine();
+            }catch(Exception e)
+            {
+                //cau lenh xu ly ngoai le
+                Age = "0";
+            }
+        } 
+
+
+
+
+        
+  
     }
 
 }
